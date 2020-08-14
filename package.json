@@ -1,0 +1,26 @@
+{
+  "name": "new-js-shopping-cart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpck.config.js",
+  "scripts": {
+    "test": "jest --watchAll",
+    "start": "webpack-dev-server  --mode development --open",
+    "build": "webpack --mode production"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^4.2.1",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "jest": "^26.4.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
