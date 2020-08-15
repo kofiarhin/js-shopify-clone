@@ -13,6 +13,28 @@ module.exports = {
 
             filename: 'index.html',
             template: "./src/index.html"
+        }),
+
+        new htmlWebpackPlugin({
+            filename: "about.html",
+            template: "./src/about.html"
+        }),
+
+        new htmlWebpackPlugin({
+
+            filename: 'register.html',
+            template: "./src/register.html"
+        }),
+
+        new htmlWebpackPlugin({
+
+            filename: 'login.html',
+            template: './src/login.html'
+        }),
+
+        new htmlWebpackPlugin({
+            filename: "contact.html",
+            template: "./src/contact.html"
         })
     ],
 
