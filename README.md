@@ -1,1 +1,1 @@
-# An impreved simple unisex shopping cart
+# An improved simple unisex shopping cart
