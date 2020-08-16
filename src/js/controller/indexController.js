@@ -1,5 +1,6 @@
+const { test } = require("../lib/helper");
 // index controller
 module.exports = function () {
 
-    console.log("index controller")
+    test("we on it")
 }

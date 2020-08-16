@@ -1,6 +1,6 @@
 const indexController = require("./controller/indexController");
 const aboutController = require("./controller/aboutController");
-
+const contactController = require("./controller/contactController");
 
 // router
 module.exports = function () {
@@ -27,10 +27,13 @@ module.exports = function () {
             aboutController();
             return;
         case "/register.html":
-            console.log("register page")
+            contactController();
             return;
         case "/login.html":
             console.log("register controller")
+            return;
+        case "/contact.html":
+            console.log("contact controller")
             return;
         default:
             console.log("page not found!!!")
