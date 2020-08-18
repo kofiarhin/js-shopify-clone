@@ -1,0 +1,26 @@
+.sidenav
+    position: fixed
+    top: 0
+    bottom: 0
+    width: 80vw
+    background: rgba(black, 0.9)
+    color: white
+    transform: translateX(-80vw)
+    transition: all ease-in-out 300ms
+    display: none
+    justify-content: center
+    align-items: center
+    ul li
+        text-align: center
+        padding: 0.8rem
+        font-size: 1.2rem
+    ul li a
+        color: white
+    &.active
+        transform: translateX(0vw)
+
+
+
+@media(max-width: 850px)
+    .sidenav
+        display: flex

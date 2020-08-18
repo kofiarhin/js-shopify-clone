@@ -6,6 +6,12 @@ const test = function (item) {
 };
 
 
+const getElement = function(name) {
+
+    return document.querySelector(name);
+}
+
 module.exports = {
-    test
+    test,
+    getElement
 }

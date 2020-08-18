@@ -1,15 +1,26 @@
 
 function renderHeader(markup) {
- const header = document.createElement("header");
+    const header = document.createElement("header");
     header.classList.add("main-header")
     header.innerHTML = markup;
     document.body.appendChild(header)
 }
 
 
+function showSideNav() {
+
+        const element = document.querySelector(".sidenav");
+
+        if(element) {
+            element.classList.add("active");
+        }
+}
+
+
+// rennder header
 const render = function () {
-    
-   
+
+
     let markup = `
     
              <div class="container"> 
@@ -33,8 +44,6 @@ const render = function () {
     `;
 
     renderHeader(markup);
-
-    renderSidenav();
 
 }
 
