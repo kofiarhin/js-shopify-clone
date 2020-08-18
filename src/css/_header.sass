@@ -1,0 +1,40 @@
+.main-header
+    background: rgba(black, 0.8)
+    color: white
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 1rem  0rem
+        .logo
+            font-size: 1.2rem
+            text-transform: uppercase
+            color: white
+        form
+            width: 60%
+            input
+                width: 100%
+                background: white
+                padding: 0.4rem 0rem
+                text-indent: 2rem
+                border-radius: 50px
+        nav 
+            display: flex
+            align-items: center
+            a
+                margin-left: .4rem
+                color: white
+                font-size: 0.8rem
+        .menu
+            font-size: 2rem
+            cursor: pointer
+            display: none
+
+@media(max-width: 850px)
+    .main-header .container
+        nav, input
+            display: none
+        .menu
+            display: block
+
+            
