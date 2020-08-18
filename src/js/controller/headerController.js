@@ -1,20 +1,13 @@
 
+
 function renderHeader(markup) {
-    const header = document.createElement("header");
+    // const header = document.createElement("header");
+
+    const header = document.querySelector("header")
     header.classList.add("main-header")
     header.innerHTML = markup;
-    document.body.appendChild(header)
 }
 
-
-function showSideNav() {
-
-        const element = document.querySelector(".sidenav");
-
-        if(element) {
-            element.classList.add("active");
-        }
-}
 
 
 // rennder header
@@ -34,7 +27,7 @@ const render = function () {
                 <input type="text"  placeholder="Search for product" />
             </form>
             <nav> 
-                <a href="/">Home </a>
+                <a href="shop.html">Shop</a>
                 <a href="login.html">Login</a>
                 <a href="register.html">Register</a>
             </nav>
