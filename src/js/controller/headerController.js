@@ -19,7 +19,7 @@ const render = function () {
              <div class="container"> 
                     
                     <a href="index.html">
-                            <h1 class="logo">EscoShop</h1>
+                            <h1 class="logo">TheShop</h1>
                     
                      </a>
 
