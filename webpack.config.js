@@ -35,6 +35,11 @@ module.exports = {
         new htmlWebpackPlugin({
             filename: "contact.html",
             template: "./src/contact.html"
+        }),
+
+        new htmlWebpackPlugin({
+            filename: "shop.html",
+            template: "./src/shop.html"
         })
     ],
 
