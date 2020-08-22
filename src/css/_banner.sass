@@ -1,0 +1,32 @@
+#banner
+    width: 100%
+    .container
+        height: 80vh
+        background:
+            image: url(../img/banner-bg.jpg)
+            size: cover
+            position: center
+        display: flex
+        justify-content: center
+        align-items: center
+        .cta
+            display: inline-block
+            background: black
+            color: white
+            padding: 1rem 4rem
+            font-size: 1.8rem 
+            font-weight: 400
+            transition: all ease-in-out 300ms
+            cursor: pointer
+            &:hover
+                background: rgba(black, 0.7)
+
+
+
+
+@media(max-width: 950px)
+    #banner .container
+        height: 70vh
+        .cta
+            font-size: 1rem
+    

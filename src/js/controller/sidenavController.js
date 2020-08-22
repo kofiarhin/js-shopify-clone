@@ -20,42 +20,43 @@ function createSidenav() {
     
                     <ul> 
                     
-                            <li>  <a href="index.html"> Home </a></li>
-                            <li>  <a href="about.html">About</a></li>
+                            <li>  <a href="index.html">Home</a></li>
+                            <li>  <a href="men.html">Men</a></li>
+                            <li>  <a href="women.html">Women</a></li>
+                            <li>  <a href="cart.html">Cart</a></li>
                             <li>  <a href="login.html">Login</a></li>
                             <li>  <a href="register.html">Regsiter</a></li>
                     </ul>
     `;
 
-     element.innerHTML = markup;
-     element.classList.add("sidenav");
-    
-     document.body.appendChild(element);
+    element.innerHTML = markup;
+    element.classList.add("sidenav");
+
+    document.body.appendChild(element);
 }
 
 
 function menuController() {
 
-     const menu = getElement(".menu");
+    const menu = getElement(".menu");
 
-        if(menu) {
+    if (menu) {
 
-            menu.addEventListener("click", function() {
+        menu.addEventListener("click", function () {
 
-                    const sidenav = getElement(".sidenav");
+            const sidenav = getElement(".sidenav");
 
-                    sidenav.classList.toggle("active");
-            });
-        }
+            sidenav.classList.toggle("active");
+        });
+    }
 }
 
 
 // sidenav controller
-module.exports = function() {
+module.exports = function () {
 
-       createSidenav();
+    createSidenav();
+    menuController();
 
-       menuController();
 
-        
 }

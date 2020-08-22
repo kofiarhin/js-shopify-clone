@@ -20,7 +20,7 @@ module.exports = function () {
     console.log(url)
     switch (url) {
 
-        case "/":
+        case "/": case "/index.html":
             indexController();
             return;
         case "/about.html":
