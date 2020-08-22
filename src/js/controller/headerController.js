@@ -29,6 +29,7 @@ const render = function () {
             <nav> 
                 <a href="men.html">Men</a>
                 <a href="women.html">Women</a>
+                <a href="cart.html">Cart</a>
                 <a href="login.html">Login</a>
                 <a href="register.html">Register</a>
             </nav>

@@ -50,6 +50,11 @@ module.exports = {
         new htmlWebpackPlugin({
             filename: "women.html",
             template: "./src/women.html"
+        }),
+
+        new htmlWebpackPlugin({
+            filename: "cart.html",
+            template: "./src/cart.html"
         })
     ],
 
