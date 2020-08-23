@@ -1,8 +1,8 @@
-const firebase = require(("../firebase"))
-
+const { showLoader } = require("../lib/helper");
 // index controller
 module.exports = function () {
 
-    console.log("Index controller")
+    showLoader();
+
 
 }
