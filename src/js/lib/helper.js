@@ -48,7 +48,7 @@ const renderLoader = function () {
     setTimeout(() => {
 
         removeLoader();
-    }, 3000);
+    }, 1000);
 }
 
 module.exports = {

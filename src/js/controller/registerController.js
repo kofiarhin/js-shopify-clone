@@ -1,4 +1,5 @@
+const { renderLoader } = require("../lib/helper");
 module.exports = function () {
 
-    console.log("register contoller!!!!!")
+    renderLoader();
 }
