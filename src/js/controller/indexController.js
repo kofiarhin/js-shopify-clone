@@ -1,13 +1,8 @@
-const { showLoader, removeLoader } = require("../lib/helper");
+const { renderLoader } = require("../lib/helper");
+
 // index controller
 module.exports = function () {
 
-    showLoader();
 
-    setTimeout(() => {
-
-
-        removeLoader();
-    }, 3000);
-
+    renderLoader();
 }
