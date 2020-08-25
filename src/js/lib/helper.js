@@ -16,35 +16,45 @@ const getElement = function (name) {
 function showLoader() {
 
     const element = document.createElement("div");
-    const wrapper = document.createElement("div");
-    wrapper.classList.add("wrapper")
+    element.classList.add("wrapper")
+    element.classList.add("active");
 
-    wrapper.innerHTML = `
-            <div class="loader">
-                    
-                     
-   <span class="loader-inner-1"></span>
-        <span class="loader-inner-2"></span>
-        <span class="loader-inner-3"></span>
-        <span class="loader-inner-4"></span>
-             </div>
-    `;
 
-    document.body.appendChild(wrapper);
+
+    element.innerHTML = `
+     <div class="wrapper">
+  <div id="preloader">
+  <div id="loader"></div>
+</div>
+</div>       
+`;
+
+    document.body.appendChild(element);
 
 }
 
-// remove loader
-function removeLoader() {
 
-    const element = document.querySelector(".loader");
+const removeLoader = function () {
 
-    element.classList.remove("active")
+    const element = document.querySelector(".wrapper");
+    element.classList.remove("active");
+    element.classList.add("remove");
 }
 
+
+const renderLoader = function () {
+
+    showLoader();
+    setTimeout(() => {
+
+        removeLoader();
+    }, 3000);
+}
 
 module.exports = {
     test,
     getElement,
-    showLoader
+    showLoader,
+    removeLoader,
+    renderLoader
 }

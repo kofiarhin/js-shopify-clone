@@ -1,11 +1,10 @@
 const indexController = require("./controller/indexController");
 const aboutController = require("./controller/aboutController");
 const contactController = require("./controller/contactController");
+const LoginController = require("./controller/loginController")
 
 // router
 module.exports = function () {
-
-
 
     const state = {
 
@@ -30,7 +29,7 @@ module.exports = function () {
             contactController();
             return;
         case "/login.html":
-            console.log("register controller")
+            LoginController();
             return;
         case "/contact.html":
             console.log("contact controller")
