@@ -52,12 +52,16 @@ input
     label
         font-weight: 400
         font-size: 1.2rem
+        display: inline-block
+        margin-bottom: .8rem
     input, select
         display: block
         width: 100%
         padding: 0.8rem 0rem
         margin-bottom: 1rem
         font-size: 1rem
+        border: 1px solid rgba(black, .2)
+
     button
         outline: none
         border: none
@@ -68,3 +72,13 @@ input
         background: black
         color: white
         font-weight: 500
+
+@media(max-width: 500px)
+    .title
+        font-size: 1.8rem
+    .form-wrapper
+        label
+            font-size: 1rem
+        input, select
+            font-size: 1rem
+            padding: .8rem
