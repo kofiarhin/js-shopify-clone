@@ -17,7 +17,7 @@ async function loginUser(data) {
 
             if (data.password == userPassword) {
 
-                console.log("password match");
+                console.log("password match. redirect user to dashboard");
             } else {
 
                 console.log("invalid email/password combination")
