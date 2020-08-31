@@ -79,6 +79,15 @@ module.exports = {
                 ]
             },
 
+
+            {
+                test: /\.js$/,
+                exclude: "/node_modules",
+                use: [
+                    "babel-loader"
+                ]
+            },
+
             {
                 test: /\.(jpg|png|svg|gif)/,
                 use: [
