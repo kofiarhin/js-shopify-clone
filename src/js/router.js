@@ -3,6 +3,11 @@ const aboutController = require("./controller/aboutController");
 const contactController = require("./controller/contactController");
 const LoginController = require("./controller/loginController")
 const RegisterController = require("./controller/registerController")
+const CartController = require("./controller/cartController");
+
+
+
+
 // router
 module.exports = function () {
 
@@ -33,6 +38,10 @@ module.exports = function () {
             return;
         case "/contact.html":
             console.log("contact controller")
+            return;
+        case "/cart.html":
+
+            CartController();
             return;
         default:
             console.log("page not found!!!")

@@ -1,3 +1,27 @@
+const jwt = require("jsonwebtoken");
+const config = require("../../../config/config");
+
+
+// verify token
+const verifyToken = (token) => {
+
+    // get payload
+    const payload = jwt.verify(token, config.secret);
+
+    return payload;
+
+}
+
+// genterate token
+const genToken = function (data) {
+
+    const token = jwt.sign(data, config.secret);
+
+    return token;
+};
+
+
+
 
 // console.log an item
 const test = function (item) {
@@ -56,5 +80,7 @@ module.exports = {
     getElement,
     showLoader,
     removeLoader,
-    renderLoader
+    renderLoader,
+    genToken,
+    verifyToken
 }
