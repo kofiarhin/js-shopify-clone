@@ -25,6 +25,9 @@ const createUser = async function (data) {
     }
 }
 
+
+
+// submit controller
 const submitControler = async function (e) {
 
     e.preventDefault();
@@ -44,7 +47,7 @@ const submitControler = async function (e) {
 // register controller
 module.exports = function () {
 
-    // renderLoader();
+    renderLoader();
 
     const form = document.querySelector("form");
 
