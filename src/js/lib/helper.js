@@ -33,6 +33,27 @@ const test = function (item) {
 };
 
 
+const checkLogin = () => {
+
+    const token = sessionStorage.getItem("token");
+
+    if (token) {
+
+        const payload = verifyToken(token);
+
+
+        if (!_.isEmpty(payload)) {
+
+            return payload;
+        }
+
+    }
+
+
+
+}
+
+
 // get element from dom
 const getElement = function (name) {
 
@@ -86,4 +107,5 @@ module.exports = {
     renderLoader,
     genToken,
     verifyToken,
+    checkLogin
 }

@@ -36,15 +36,13 @@ async function loginUser(data) {
 
             if (md5(data.password) == userPassword) {
 
-                console.log("password match. redirect user to dashboard");
-
                 // generate token
-                const token = genToken(data);
+                const token = genToken(userData);
                 // set session token
                 sessionStorage.setItem("token", token);
 
                 // redirect user  to cart
-                window.location.href = "cart.html"
+                window.location.href = "shop.html"
 
             } else {
 

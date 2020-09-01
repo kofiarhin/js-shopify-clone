@@ -55,6 +55,17 @@ module.exports = {
         new htmlWebpackPlugin({
             filename: "cart.html",
             template: "./src/cart.html"
+        }),
+
+
+        new htmlWebpackPlugin({
+            filename: 'postItem.html',
+            template: "./src/postItem.html"
+        }),
+
+        new htmlWebpackPlugin({
+            filename: "profile.html",
+            template: "./src/profile.html"
         })
     ],
 
