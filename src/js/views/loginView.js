@@ -8,6 +8,14 @@ const renderInfo = function (message) {
 }
 
 
+const renderErrors = function (errors) {
+
+
+
+}
+
+
 module.exports = {
-    renderInfo
+    renderInfo,
+    renderErrors
 }

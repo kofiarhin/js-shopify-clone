@@ -2,6 +2,9 @@ const jwt = require("jsonwebtoken");
 const config = require("../../../config/config");
 
 
+
+
+
 // verify token
 const verifyToken = (token) => {
 
@@ -82,5 +85,5 @@ module.exports = {
     removeLoader,
     renderLoader,
     genToken,
-    verifyToken
+    verifyToken,
 }

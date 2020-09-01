@@ -68,7 +68,8 @@ async function loginUser(data) {
 // login controller
 module.exports = function () {
 
-
+    // check if there is success data in sesssion
+    // displays success content and delete success session
     checkSuccess();
 
     renderLoader();

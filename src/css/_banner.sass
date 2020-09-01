@@ -9,6 +9,11 @@
         display: flex
         justify-content: center
         align-items: center
+        flex-direction: column
+        .banner-title
+            color: white
+            margin-bottom: 0.8rem
+
         .cta
             display: inline-block
             background: black
@@ -27,6 +32,16 @@
 @media(max-width: 950px)
     #banner .container
         height: 70vh
+        .banner-title
+            font-size: 1.4rem
         .cta
+            font-size: 1rem
+
+@media(max-width: 500px)
+    #banner .container
+        text-align: center
+        padding: 1rem
+        .cta
+            padding: 0.8rem 4rem
             font-size: 1rem
     
