@@ -26,7 +26,6 @@ const createUser = async function (data) {
 }
 
 
-
 // submit controller
 const submitControler = async function (e) {
 
@@ -41,7 +40,6 @@ const submitControler = async function (e) {
 
     await createUser(data);
 
-
 }
 
 // register controller
@@ -50,6 +48,5 @@ module.exports = function () {
     renderLoader();
 
     const form = document.querySelector("form");
-
     form.addEventListener("submit", submitControler);
 }
