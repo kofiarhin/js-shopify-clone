@@ -1,4 +1,4 @@
-const firebase = require("../firebase");
+const { firebase, firebaseLooper } = require("../firebase");
 class User {
 
 
@@ -15,6 +15,16 @@ class User {
             return error;
         }
     }
+
+
+    // get user
+    async getUser(field, value) {
+
+        const data = await firebase.database().ref('users').orderByChild(field).equalTo(value).once("value").then(snapshot => firebaseLooper(snapshot)[0]);
+
+        return data;
+    }
+
 
     async login({ email, password }) {
 

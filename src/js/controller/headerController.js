@@ -54,7 +54,7 @@ const render = function () {
                 <input type="text"  placeholder="Search for product" />
             </form>
             <nav> 
-                <a href="men.html">Post Item</a>
+                <a href="postItem.html">Post Item</a>
                 <a href="shop.html">shop</a>
                 <a href="login.html">Login</a>
                 <a href="register.html">Register</a>

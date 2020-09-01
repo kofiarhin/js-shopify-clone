@@ -5,13 +5,11 @@ const { renderInfo } = require("../views/loginView");
 const md5 = require("md5");
 
 
-
 // check success
 function checkSuccess() {
 
     const success = sessionStorage.getItem("success");
 
-    console.log(sessionStorage);
 
     if (success) {
 
@@ -61,6 +59,40 @@ async function loginUser(data) {
 }
 
 
+// submit controller
+
+async function SubmitController(e) {
+    e.preventDefault();
+
+    const data = {
+        email: "admin@gmail.com",
+        password: "password"
+    }
+
+
+    const user = new User();
+
+    const userData = await user.getUser("email", "admin@gmail.com");
+
+    if (!_.isEmpty(userData)) {
+
+        const { password } = userData;
+
+        if (password === md5(data.password)) {
+
+            const { password, ...rest } = userData;
+
+            const token = genToken(rest);
+
+            sessionStorage.setItem('token', token);
+
+            window.location.href = "shop.html";
+        }
+    }
+
+
+}
+
 
 
 // login controller
@@ -74,14 +106,6 @@ module.exports = function () {
 
     const form = document.querySelector("form");
     const btn = document.querySelector("button");
-    form.addEventListener("submit", (e) => {
 
-        e.preventDefault();
-
-        btn.textContent = "Loading......."
-
-        loginUser({ email: "admin@gmail.com", password: "password" })
-
-
-    });
+    form.addEventListener("submit", SubmitController);
 }
