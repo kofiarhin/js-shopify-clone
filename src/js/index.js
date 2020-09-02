@@ -3,18 +3,23 @@ const Router = require("./router");
 const HeaderController = require("./controller/headerController");
 const SidenavController = require("./controller/sidenavController");
 const HashChangeController = require('./controller/hashChangeController');
+const NavigationController = require("./controller/navigationController");
 
 function MainController() {
 
     // ger information from url
     Router();
 
+    // render naviation
+
+    NavigationController();
+
     // render headers
-    HeaderController.render();
+    // HeaderController.render();
 
     // sideNavController
 
-    SidenavController();
+    // SidenavController();
 }
 
 
