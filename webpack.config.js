@@ -42,15 +42,6 @@ module.exports = {
             template: "./src/shop.html"
         }),
 
-        new htmlWebpackPlugin({
-            filename: "men.html",
-            template: "./src/men.html"
-        }),
-
-        new htmlWebpackPlugin({
-            filename: "women.html",
-            template: "./src/women.html"
-        }),
 
         new htmlWebpackPlugin({
             filename: "cart.html",

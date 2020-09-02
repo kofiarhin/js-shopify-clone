@@ -37,13 +37,16 @@ const render = function () {
                 <a href="postItem.html">Post Item</a>
                 <a href="#logout">Logout</a>
             </nav>
-                <i class="fa fa-bars menu"></i>
+
+
+              <div class="menu"> 
+                 <i class="fa fa-bars"> </i>
+              </div>
              </div>
          
          `;
     } else {
         markup = `
-    
              <div class="container"> 
                     
                     <a href="index.html">
@@ -60,8 +63,12 @@ const render = function () {
                 <a href="register.html">Register</a>
             </nav>
 
-                <i class="fa fa-bars menu"></i>
+           <div class="menu"> 
+             <i class="fa fa-bars"> </i>
+           </div>
+             
              </div>
+              
     `;
 
     }
