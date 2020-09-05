@@ -110,8 +110,15 @@ const submitControler = async function (e) {
     // clear errors
     RegisterView.clearErrors();
 
-    let data = { firstname, lastname, email, password, gender }
+    // let data = { firstname, lastname, email, password, gender }
 
+    const data = {
+        firstname: "admin",
+        lastname: "admin",
+        email: "admin@gmail.com",
+        password: "password",
+        gender: "male"
+    }
     // do some validation works
     const errors = await validateData(data);
 
