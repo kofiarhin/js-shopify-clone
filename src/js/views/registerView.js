@@ -13,12 +13,13 @@ const clearErrors = function () {
 
 const renderErrors = function (errors) {
 
+
+
     const elements = document.querySelectorAll(".error");
 
     const errArr = Object.keys(errors);
 
     errArr.forEach(err => {
-
         const element = document.querySelector(`.error-${err}`);
         element.textContent = errors[err];
     });

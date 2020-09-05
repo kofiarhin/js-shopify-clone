@@ -4,7 +4,7 @@ const contactController = require("./controller/contactController");
 const LoginController = require("./controller/loginController")
 const RegisterController = require("./controller/registerController")
 const CartController = require("./controller/cartController");
-
+const ShopController = require("./controller/shopController");
 
 
 
@@ -42,6 +42,9 @@ module.exports = function () {
         case "/cart.html":
 
             CartController();
+            return;
+        case "/shop.html":
+            ShopController();
             return;
         default:
             console.log("page not found!!!")

@@ -64,15 +64,19 @@ async function loginUser(data) {
 async function SubmitController(e) {
     e.preventDefault();
 
+    const email = document.querySelector(".email").value;
+    const password = document.querySelector(".password").value;
+
+
     const data = {
-        email: "admin@gmail.com",
-        password: "password"
+        email,
+        password
     }
 
 
     const user = new User();
 
-    const userData = await user.getUser("email", "admin@gmail.com");
+    const userData = await user.getUser("email", email);
 
 
     if (!_.isEmpty(userData)) {

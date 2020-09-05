@@ -97,6 +97,8 @@ const submitControler = async function (e) {
 
     e.preventDefault();
 
+    const user = new User();
+
     // get  user data
     const firstname = document.querySelector(".firstname").value.trim();
     const lastname = document.querySelector(".lastname").value.trim();
@@ -110,15 +112,15 @@ const submitControler = async function (e) {
     // clear errors
     RegisterView.clearErrors();
 
-    // let data = { firstname, lastname, email, password, gender }
+    let data = { firstname, lastname, email, password, gender }
 
-    const data = {
-        firstname: "admin",
-        lastname: "admin",
-        email: "admin@gmail.com",
-        password: "password",
-        gender: "male"
-    }
+    // const data = {
+    //     firstname: "kofi",
+    //     lastname: "arhin",
+    //     email: "kofiarhin@gmail.com",
+    //     password: "password",
+    //     gender: "male"
+    // }
     // do some validation works
     const errors = await validateData(data);
 
@@ -127,6 +129,17 @@ const submitControler = async function (e) {
         RegisterView.renderErrors(errors)
         return;
     }
+
+    // check if user is not already register
+
+    const newUser = await user.getUser("email", data.email);
+
+
+    if (newUser) {
+
+        return RegisterView.renderErrors({ email: "email already taken" })
+    }
+
 
     // craete user
     await createUser(data);
