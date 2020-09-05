@@ -3,14 +3,15 @@ const User = require("../model/user");
 const _ = require("lodash");
 const { renderInfo } = require("../views/loginView");
 const md5 = require("md5");
-
+const { validateAll } = require("indicative/validator");
+const LoginView = require("../views/loginView");
 
 // check success
 function checkSuccess() {
 
     const success = sessionStorage.getItem("success");
 
-
+    // if there is a sesssion display session inf and delete session from session storage
     if (success) {
 
         renderInfo(success);
@@ -59,10 +60,61 @@ async function loginUser(data) {
 }
 
 
+
+function handleErrors(errors) {
+
+    let result = {};
+
+    errors.forEach(error => {
+
+        result[error.field] = error.message;
+    });
+
+    if (!_.isEmpty(result)) {
+
+        return result;
+    }
+}
+
+
+// validate data
+async function validateData(data) {
+
+
+    const rules = {
+        email: "required|email",
+        password: "required"
+    };
+
+    const messages = {
+
+        required: (field) => `${field} id required`,
+        "email.email": "invalid eamil format",
+
+    };
+
+    try {
+        await validateAll(data, rules, messages)
+    } catch (e) {
+
+        const errors = handleErrors(e)
+
+        if (!_.isEmpty(errors)) {
+            return errors;
+        }
+    }
+
+}
+
+
 // submit controller
 
 async function SubmitController(e) {
     e.preventDefault();
+
+
+    // clear errors
+    LoginView.clearErrors();
 
     const email = document.querySelector(".email").value;
     const password = document.querySelector(".password").value;
@@ -73,6 +125,13 @@ async function SubmitController(e) {
         password
     }
 
+    const errors = await validateData(data);
+
+    if (!_.isEmpty(errors)) {
+
+        // return console.log("display errors")
+        return LoginView.renderErrors(errors)
+    }
 
     const user = new User();
 
