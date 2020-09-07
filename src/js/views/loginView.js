@@ -8,8 +8,6 @@ const renderInfo = function (message) {
 }
 
 
-
-
 const renderErrors = function (errors) {
 
     const errArr = Object.keys(errors);
@@ -24,6 +22,7 @@ const renderErrors = function (errors) {
 }
 
 
+// clear all errors
 const clearErrors = function () {
 
     const errors = document.querySelectorAll(".error");
