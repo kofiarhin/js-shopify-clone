@@ -1,47 +1,70 @@
 #banner
-    width: 100%
-    .container
-        height: 80vh
-        background:
-            image: url(../img/banner-bg.jpg)
-            size: cover
-            position: center
-        display: flex
-        justify-content: center
-        align-items: center
-        flex-direction: column
-        .banner-title
+    background: black
+    min-height: 80vh
+    position: relative
+    background:
+        image: url(../img/banner-bg.jpg)
+        size: cofer
+        position: center
+    .content
+        position: absolute
+        width: 100%
+        max-width:
+        top: 30%
+        left: 10%
+        .title
+            font:
+                size: 4rem
+                weight: 700
             color: white
-            margin-bottom: 0.8rem
-
-        .cta
+        .wrapper
+            display: flex
+            margin-bottom: 1rem
+        button, input
             display: inline-block
-            background: black
+            height: 50px
+        button
+            background: $main
             color: white
-            padding: 1rem 4rem
-            font-size: 1.8rem 
-            font-weight: 400
-            transition: all ease-in-out 300ms
-            cursor: pointer
-            &:hover
-                background: rgba(black, 0.7)
+            width: 200px
+            line-height: 50px
+            text-align: center
+            border: 1px solid white
+        input
+            width: 400px
+            background: white
+            text-indent: 20px
+        .slug 
+            font:
+                size: 0.8rem
+                weight: 400
+            color: white
+            line-height: 1.2
 
 
 
+@media(max-width: 800px)
+    #banner .content
+        top: 18%
+        .title
+            font-size: 3rem
 
-@media(max-width: 950px)
-    #banner .container
-        height: 70vh
-        .banner-title
-            font-size: 1.4rem
-        .cta
-            font-size: 1rem
+@media(max-width: 650px)
+    #banner .content
+        left: 5%
+        width: 90%
+        .wrapper
+            flex-direction: column
+            button, input
+                width: 100%
+                margin-bottom: 1rem
 
 @media(max-width: 500px)
-    #banner .container
-        text-align: center
-        padding: 1rem
-        .cta
-            padding: 0.8rem 4rem
-            font-size: 1rem
-    
+    #banner .content
+        .title
+            font-size: 2.5rem
+            text-align: center
+        button, input
+            height: 50px
+        button
+            line-height: 50px
