@@ -87,6 +87,8 @@ const removeLoader = function () {
     const element = document.querySelector(".wrapper");
     element.classList.remove("active");
     element.classList.add("remove");
+
+    test(element)
 }
 
 
@@ -94,7 +96,6 @@ const renderLoader = function () {
 
     showLoader();
     setTimeout(() => {
-
         removeLoader();
     }, 1000);
 }
