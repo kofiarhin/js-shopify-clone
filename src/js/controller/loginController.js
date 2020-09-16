@@ -166,7 +166,6 @@ module.exports = function () {
     // displays success content and delete success session
     checkSuccess();
 
-    renderLoader();
 
     const form = document.querySelector("form");
     const btn = document.querySelector("button");
