@@ -58,3 +58,30 @@
             font-size: 1.5rem
             margin-bottom: 0.8rem
 
+@media(max-width: 960px)
+    #main
+        padding: 1rem
+        .title
+            font-size: 2rem
+            margin-bottom: 0.5rem
+        .slug
+            font-size: 1rem
+        .popular-wrapper, .forward-wrapper
+            width: 90%
+            grid-template-columns: repeat(2, 1fr)
+        .forward-wrapper .forward-unit
+            h2
+                font-size: 1.4rem
+            p
+                font-size: 0.8rem
+@media(max-width: 540px)
+    #main
+        .popular-wrapper
+            grid-template-columns: repeat(2, 1fr)
+            .shop-unit
+                .category, .name
+                    font-size: 0.8rem
+        .forward-wrapper
+            grid-template-columns: 1fr
+        .title
+            font-size: 1.8rem
