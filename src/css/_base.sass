@@ -1,6 +1,7 @@
 @import "normalize"
 // colors
 $main: #284C3F
+$red: #ff4b5c
 
 
 
@@ -55,7 +56,13 @@ input
     margin-bottom: 0.8rem
 
 .error
-    color: red
+    background: $red 
+    color: white
+    padding: .5rem
+    border-radius: 5px
+    display: none
+    &.active
+        display: block
     
 .form-wrapper
     width: 500px

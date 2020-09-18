@@ -25,7 +25,7 @@ const render = function () {
          <div class="container"> 
                     
                     <a href="index.html">
-                            <h1 class="logo">TheShop</h1>
+                            <h1 class="logo">TheShops</h1>
                      </a>
 
             <form> 
@@ -50,7 +50,7 @@ const render = function () {
              <div class="container"> 
                     
                     <a href="index.html">
-                            <h1 class="logo">TheShop</h1>
+                            <h1 class="logo">TheShops</h1>
                      </a>
 
             <form> 

@@ -15,7 +15,7 @@ const renderErrors = function (errors) {
     errArr.forEach(err => {
 
         const field = document.querySelector(`.error-${err}`);
-
+        field.classList.add("active")
         field.textContent = errors[err];
     });
 
@@ -27,7 +27,10 @@ const clearErrors = function () {
 
     const errors = document.querySelectorAll(".error");
 
-    errors.forEach(error => error.textContent = "")
+    errors.forEach(error => {
+        error.classList.remove("active")
+        error.textContent = ""
+    })
 }
 
 module.exports = {

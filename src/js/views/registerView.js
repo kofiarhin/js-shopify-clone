@@ -5,7 +5,7 @@ const clearErrors = function () {
     const errors = document.querySelectorAll(".error");
 
     errors.forEach(error => {
-
+        error.classList.remove("active")
         error.textContent = "";
     });
 
@@ -21,6 +21,7 @@ const renderErrors = function (errors) {
 
     errArr.forEach(err => {
         const element = document.querySelector(`.error-${err}`);
+        element.classList.add("active")
         element.textContent = errors[err];
     });
 }
