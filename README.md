@@ -1,2 +1,2 @@
-# An improved simple unisex shopping cart
-# [Live Demo](https://js-shopify-clone.herokuapp.com/)
+# A simple ecommerce system for shops
+# [Live Demo](https://js-theshops.herokuapp.com/)
