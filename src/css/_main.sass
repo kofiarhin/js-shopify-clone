@@ -1,0 +1,60 @@
+#main
+    padding: 2rem 2rem 4rem 2rem
+    background: $main
+    color: white
+    text-align: center
+    min-height: 100vh
+    .slug
+        font:
+            size: 1.2rem
+            weight: 400
+        margin-bottom: 0.8rem 
+    a
+        color: white
+        font:
+            size: 1rem
+            weight: 700
+        display: inline-block
+        margin-bottom: 2rem
+
+    .popular-wrapper
+        width: 80%
+        margin: 0 auto 40px
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 20px
+        .shop-unit .cover
+            width: 100%
+            padding-top: 100%
+            background:
+                size: cover
+                position: center
+            margin-bottom: 0.8rem
+        .shop-unit
+            &:nth-child(1)
+                .cover
+                    background-image: url(../img/covers/cover-1.jpg) 
+            &:nth-child(2)
+                .cover
+                    background-image: url(../img/covers/cover-2.jpg)
+
+            &:nth-child(3)
+                .cover
+                    background-image: url(../img/covers/cover-3.jpg)
+
+            &:nth-child(4)
+                .cover
+                    background-image: url(../img/covers/cover-4.jpg)
+        .shop-unit .category
+            text-transform: uppercase
+            margin-bottom: 0.2rem
+    .forward-wrapper
+        width: 80%
+        margin: 0 auto
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 20px
+        .forward-unit h2
+            font-size: 1.5rem
+            margin-bottom: 0.8rem
+
