@@ -60,7 +60,7 @@ module.exports = function () {
 
             <nav> 
                 <a href="index.html">Home</a>
-                <a href="shop.html">Shop</a>
+                <a href="shop.html">Shops</a>
                 <a href="login.html">Login</a>
                 <a href="register.html">Register</a>
             </nav>
@@ -74,7 +74,7 @@ module.exports = function () {
          <div class="container"> 
                     
                     <a href="index.html">
-                            <h1 class="logo">TheShop</h1>
+                            <h1 class="logo">TheShops</h1>
                      </a>
 
             <form> 

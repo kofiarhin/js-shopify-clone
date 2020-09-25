@@ -58,7 +58,7 @@ const render = function () {
             </form>
             <nav> 
                 <a href="postItem.html">Post Item</a>
-                <a href="shop.html">shop</a>
+                <a href="shop.html">shops</a>
                 <a href="login.html">Login</a>
                 <a href="register.html">Register</a>
             </nav>

@@ -1,6 +1,5 @@
 require('../css/styles.sass')
 const Router = require("./router");
-const HeaderController = require("./controller/headerController");
 const SidenavController = require("./controller/sidenavController");
 const HashChangeController = require('./controller/hashChangeController');
 const NavigationController = require("./controller/navigationController");
