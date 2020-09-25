@@ -42,8 +42,8 @@ module.exports = {
         }),
 
         new htmlWebpackPlugin({
-            filename: "shop.html",
-            template: "./src/shop.html"
+            filename: "shops.html",
+            template: "./src/shops.html"
         }),
 
 

@@ -1,0 +1,36 @@
+#shops .container
+    display: grid
+    grid-template-columns: repeat(5, 1fr )
+    grid-gap: 20px
+    .shop-unit
+        text-align: center
+    .shop-unit
+        .cover
+            padding-top: 130%
+            background-size: cover
+            background-position: center
+            margin-bottom: .8rem
+        &:nth-child(1) .cover
+            background-image: url(../img/shops/shop-1.jpg)
+        &:nth-child(2) .cover
+            background-image: url(../img/shops/shop-2.jpg)
+        &:nth-child(3) .cover
+            background-image: url(../img/shops/shop-3.jpg)
+        &:nth-child(4) .cover
+            background-image: url(../img/shops/shop-4.jpg)
+        &:nth-child(5) .cover
+            background-image: url(../img/shops/shop-5.jpg)
+        .name
+            font-size: 1rem
+
+@media(max-width: 1200px)
+    #shops .container
+        grid-template-columns: repeat(4, 1fr)
+
+@media(max-width: 960px)
+    #shops .container
+        grid-template-columns: repeat(3, 1fr)
+
+@media(max-width: 650px)
+    #shops .container
+        grid-template-columns: repeat(2, 1fr)
