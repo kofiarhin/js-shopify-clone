@@ -5,7 +5,7 @@
   "main": "webpck.config.js",
   "scripts": {
     "test": "jest --watchAll",
-    "start": "webpack-dev-server  --mode development --open",
+    "dev": "webpack-dev-server  --mode development --open",
     "build": "webpack --mode production"
   },
   "author": "",
